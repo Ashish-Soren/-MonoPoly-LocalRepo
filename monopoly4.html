@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="monopoly4.css">
+    <script src="https://kit.fontawesome.com/5abad783db.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <form id="playerForm">
+        <h1 id="greeting">WELCOME TO MY MONOPOLY</h1>
+        <h2 id="logo"><i class="fa-solid fa-hand-holding-dollar fa-flip fa-2xl" style="color: #ffffff;"></i></h2>
+        <label for="numPlayers">Number of Players (max 10):</label>
+        <input type="number" id="numPlayers" name="numPlayers" min="2" max="10"><br><br>
+        <button type="submit">Next</button>
+    </form>
+      
+    <div id="playerNames" style="display: none;">
+    </div>
+
+
+
+    <div id="myBoard" style="display: none;">
+        <div class="fullBoard">
+            <div class="block b1">1</div>
+            <div class="block b2">
+                <h5>2</h5>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="monopoly_images/Bombay.webp" alt="Bombay">
+                            <h2>Mumbai</h2>
+                            <p>Price=Rs.100</p>
+                            <p>Not Taken</p>
+                            <p>PlayerIcon</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h2>Mumbai</h2>
+                            <p>Rent=Rs.10</p>
+                            <p>House Cost=Rs.50</p>
+                            <p>Hotel Cost=Rs.100</p>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+                
+            <div class="block b3">
+                <h5>2</h5>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="monopoly_images/Ahmedabad.webp" alt="Ahmedabad">
+                            <h2>Ahmedabad</h2>
+                            <p>Price=Rs.100</p>
+                            <p>Not Taken</p>
+                            <p>PlayerIcon</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h2>Mumbai</h2>
+                            <p>Rent=Rs.10</p>
+                            <p>House Cost=Rs.50</p>
+                            <p>Hotel Cost=Rs.100</p>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+            <div class="block b4">
+                <h5>4</h5>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="monopoly_images/Agra.webp" alt="Agra">
+                            <h2>Agra</h2>
+                            <p>Price=Rs.100</p>
+                            <p>Not Taken</p>
+                            <p>PlayerIcon</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h2>Agra</h2>
+                            <p>Rent=Rs.10</p>
+                            <p>House Cost=Rs.50</p>
+                            <p>Hotel Cost=Rs.100</p>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+
+            <div class="block b5">
+                <h5>5</h5>
+                <div class="flip-card freeSpace">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="monopoly_images/jail.jpg" alt="Jail">
+                            <h2>Jail</h2>
+                            <p>PlayerIcon</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="monopoly_images/jail.jpg" alt="Jail">
+                            <h2>Jail</h2>
+                            <p>PlayerIcon</p>
+                        </div>
+                    </div>  
+                </div>
+            </div>            
+            <div class="block b6">
+                <h5>6</h5>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="monopoly_images/Kolkata.webp" alt="Kolkata">
+                            <h2>Kolkata</h2>
+                            <p>Price=Rs.100</p>
+                            <p>Not Taken</p>
+                            <p>PlayerIcon</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h2>Kolkata</h2>
+                            <p>Rent=Rs.10</p>
+                            <p>House Cost=Rs.50</p>
+                            <p>Hotel Cost=Rs.100</p>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+            <div class="block b7">
+                <h5>7</h5>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="monopoly_images/Bangalore.webp" alt="Bangalore">
+                            <h2>Bangalore</h2>
+                            <p>Price=Rs.100</p>
+                            <p>Not Taken</p>
+                            <p>PlayerIcon</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h2>Bangalore</h2>
+                            <p>Rent=Rs.10</p>
+                            <p>House Cost=Rs.50</p>
+                            <p>Hotel Cost=Rs.100</p>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+            <div class="block b8">
+                <h5>8</h5>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="monopoly_images/Hyderabad.webp" alt="Hyderabad">
+                            <h2>Hyderabad</h2>
+                            <p>Price=Rs.100</p>
+                            <p>Not Taken</p>
+                            <p>PlayerIcon</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h2>Hyderabad</h2>
+                            <p>Rent=Rs.10</p>
+                            <p>House Cost=Rs.50</p>
+                            <p>Hotel Cost=Rs.100</p>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+
+            <div class="block b9">
+                <h5>9</h5>
+                <div class="flip-card freeSpace">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="monopoly_images/crossroad.jpg" alt="Crossroad">
+                            <h2>Crossroad</h2>
+                            <p>PlayerIcon</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="monopoly_images/crossroad.jpg" alt="Crossroad">
+                            <h2>Crossroad</h2>
+                            <p>PlayerIcon</p>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+            <div class="block b10">10</div>
+            <div class="block b11">11</div>
+            <div class="block b12">12</div>
+
+            <div class="block b13">
+                <h5>13</h5>
+                <div class="flip-card freeSpace">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="monopoly_images/rest.jpg" alt="Rest">
+                            <h2>Rest</h2>
+                            <p>PlayerIcon</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="monopoly_images/rest.jpg" alt="Rest">
+                            <h2>Rest</h2>
+                            <p>PlayerIcon</p>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+            <div class="block b14">14</div>
+            <div class="block b15">15</div>
+            <div class="block b16">16</div>
+    
+            <div class="block blank1">
+                <h5>17</h5>
+                <div class="dice" id="dice">
+                    <button onclick="rollDice()">ROLL DICE</button>
+                    <div class="dice" id="diceResult"></div>
+                    <div class="dice" id="diceImages"></div>
+                </div>
+            </div>
+
+            <div class="block b01">01</div>
+            <div class="block b02">02</div>
+            <div class="block b03">03</div>
+            <div class="block b04">04</div>
+
+            <div class="block b05">05</div>
+            <div class="block b06">06</div>
+            <div class="block b07">07</div>
+            <div class="block b08">08</div>
+
+            <div class="block b09">09</div>
+            <div class="block b010">010</div>
+            <div class="block b011">011</div>
+            <div class="block b012">012</div>
+
+            <div class="block b013">
+                <h5>013</h5>
+                <div class="flip-card freeSpace">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="monopoly_images/crossroad.jpg" alt="Crossroad">
+                            <h2>Crossroad</h2>
+                            <p>PlayerIcon</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="monopoly_images/crossroad.jpg" alt="Crossroad">
+                            <h2>Crossroad</h2>
+                            <p>PlayerIcon</p>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+            <div class="block b014">014</div>
+            <div class="block b015">015</div>
+            <div class="block b016">016</div>
+
+            <div class="block blank2">017</div>
+        </div>
+    </div>
+
+ 
+
+    <script src="monopoly4.js"></script>
+</body>
+</html>
