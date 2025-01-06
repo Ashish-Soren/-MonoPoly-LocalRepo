@@ -1,27 +1,27 @@
-def get_input(n, prompt):
-    return [int(input(prompt)) for _ in range(n)]
+# Find Mean, Median , Mode of a continuous series
 
-n = int(input("How many entries are needed? "))
+import numpy as np
+from scipy import stats
 
-# Get the lower limits and frequencies
-ll = get_input(n, "Enter the lower limits: ")
-freq = get_input(n, "Enter the frequencies: ")
+# Define the class intervals and frequencies
+class_intervals = [0, 10, 20, 30, 40, 50, 60, 70]
+frequencies = [6, 8, 20, 25, 15, 10, 4]
 
-# Calculate class interval and cumulative frequencies
-ci = ll[1] - ll[0]
-cf = [sum(freq[:i+1]) for i in range(n)]
+# Calculate midpoints of each class interval
+midpoints = [(class_intervals[i] + class_intervals[i+1]) / 2 for i in range(len(class_intervals) - 1)]
 
-# Find the median class
-median_class_index = next(i for i in range(n) if cf[i] >= cf[-1] / 2)
+# Calculate the mean
+mean = np.sum(np.array(midpoints) * np.array(frequencies)) / np.sum(frequencies)
 
 # Calculate the median
-median = ll[median_class_index] + ((cf[-1] / 2 - cf[median_class_index - 1]) * ci) / freq[median_class_index]
+cumulative_frequency = np.cumsum(frequencies)
+median_class_index = np.argmax(cumulative_frequency > np.sum(frequencies) / 2)
+median_class = class_intervals[median_class_index]
+median = median_class + (class_intervals[median_class_index + 1] - median_class) * (np.sum(frequencies) / 2 - cumulative_frequency[median_class_index - 1]) / frequencies[median_class_index]
 
-# Display the results
-print("\nThe Data Given: ")
-print("Class \t Frequencies \t Cumulative Freq")
-for i in range(n):
-    print(f"{ll[i]} - {ll[i] + ci} \t {freq[i]} \t {cf[i]}")
+# Calculate the mode
+mode = stats.mode(midpoints)[0][0]
 
-print(f"\nThe Median Class is: {ll[median_class_index]} - {ll[median_class_index] + ci}")
-print(f"The Median is: {median}")
+print(f"Mean: {mean:.2f}")
+print(f"Median: {median:.2f}")
+print(f"Mode: {mode}")
