@@ -151,7 +151,7 @@ img{
 /* Apply isometric transformation to the board */
 .fullBoard{
     display: grid;
-    grid-template-rows: repeat(5, 300px);
+    grid-template-rows: repeat(10, 300px);
     grid-template-columns: repeat(10, 300px);
     gap: .1rem;
     margin-top: 5rem;
@@ -455,6 +455,91 @@ input{
 .blank2{
     background-color: hsl(34, 78%, 91%);
     grid-area: 2 / 7 / 5 / 10;
+}
+
+.b301{
+    position: relative;
+    grid-area: 6 / 1 / 7 / 2;
+}
+
+.b302{
+    position: relative;
+    grid-area: 6 / 2 / 7 / 3;
+}
+
+.b303{
+    grid-area: 6 / 3 / 7 / 4;
+    position: relative;
+}
+
+.b304{
+    grid-area: 6 / 4 / 7 / 5;
+    position: relative;
+}
+
+.b305{
+    grid-area: 6 / 5 / 7 / 6;
+    position: relative;
+}
+
+.b306{
+    grid-area: 7 / 5 / 8 / 6;
+    position: relative;
+}
+
+.b307{
+    grid-area: 8 / 5 / 9 / 6;
+    position: relative;
+}
+
+.b308{
+    grid-area: 9 / 5 / 10 / 6;
+    position: relative;
+}
+
+.b309{
+    grid-area: 10 / 5 / 11 / 6;
+    position: relative;
+}
+
+.b310{
+    grid-area: 10 / 4 / 11 / 5;
+    position: relative;
+}
+
+.b311{
+    grid-area: 10 / 3 / 11 / 4;
+    position: relative;
+}
+
+.b312{
+    grid-area: 10 / 2 / 11 / 3;
+    position: relative;
+}
+
+.b313{
+    grid-area: 10 / 1 / 11 / 2;
+    position: relative;
+}
+
+.b314{
+    grid-area: 9 / 1 / 10 / 2;
+    position: relative;
+}
+
+.b315{
+    grid-area: 8 / 1 / 9 / 2;
+    position: relative;
+}
+
+.b316{
+    grid-area: 7 / 1 / 8 / 2;
+    position: relative;
+}
+
+.blank3{
+    background-color: hsl(34, 78%, 91%);
+    grid-area: 7 / 2 / 10 / 5;
 }
 
 
